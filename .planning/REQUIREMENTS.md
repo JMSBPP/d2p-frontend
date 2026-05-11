@@ -20,20 +20,20 @@ Each maps to exactly one phase in the roadmap.
 - [x] **FOUND-08**: Lighthouse CI performance budget enforces LCP < 2.5s on Moto G Power simulated 3G profile; budget runs on every PR preview
 - [x] **FOUND-09**: axe-core accessibility tests run in CI; build fails on any WCAG 2.2 AA violation
 - [x] **FOUND-10**: Vercel environment variables configured for Production, Preview, Development scopes with explicit naming convention (`NEXT_PUBLIC_*` only for safe-to-leak values)
-- [ ] **FOUND-11**: Route group layout structure — `(lab)`, `(dashboard)`, `(defi)` — with RSC pages in `(lab)` never hydrating wallet state
+- [x] **FOUND-11**: Route group layout structure — `(lab)`, `(dashboard)`, `(defi)` — with RSC pages in `(lab)` never hydrating wallet state
 - [x] **FOUND-12**: Agent-accessibility scaffold in place from day one: `/llms.txt`, `/.well-known/mcp.json`, `/.well-known/openapi.yaml` stub, JSON-LD `Article` and `Dataset` schemas on every content page
 - [x] **FOUND-13**: Vitest + Playwright + MSW test infrastructure with hooks for chain mocking via anvil fork
 
 ### Umbrella Navigation (highest priority — establishes the labs/apps architecture)
 
-- [ ] **NAV-01**: Persistent top navigation bar present on every page (umbrella + every `/apps/<x>/...`) with a primary **Apps dropdown** menu item
-- [ ] **NAV-02**: Apps dropdown content is data-driven from a typed `lib/apps/registry.ts` file (array of `{ slug, name, description, status, internal_path, external_url }`); adding a new app is a one-line registry change with NO IA / nav restructuring
-- [ ] **NAV-03**: Apps dropdown today contains exactly one entry: **Abrigo** with name, one-line description ("Convex hedges for Colombian wage-earners — ∂²Π gamma"), status badge "Active" (color + icon + text per CROSS-09), primary link to `/apps/abrigo`
-- [ ] **NAV-04**: Each Apps dropdown entry shows a secondary external-link affordance (icon-only, opens in new tab); Abrigo's secondary points to https://x.com/d2pfinabrigo
-- [ ] **NAV-05**: Apps dropdown is keyboard-navigable (Tab focuses, Enter/Space opens, ArrowDown/ArrowUp cycle entries, Enter activates, Escape closes); announces "Apps menu, N entries" + per-entry "Abrigo, active, of N" to screen readers
-- [ ] **NAV-06**: Apps dropdown closes on outside click, Escape, route change, and focus-out; never traps focus
-- [ ] **NAV-07**: Top nav surfaces (in addition to Apps) the lab umbrella links: Research, Team, About, plus the language switcher; on mobile (<768px) the nav collapses to a single menu drawer that contains the Apps dropdown as a nested section
-- [ ] **NAV-08**: `/apps` index page lists all apps (today: Abrigo) with the same registry-driven content; serves as the canonical URL agents can scrape if they don't read the dropdown HTML
+- [x] **NAV-01**: Persistent top navigation bar present on every page (umbrella + every `/apps/<x>/...`) with a primary **Apps dropdown** menu item
+- [x] **NAV-02**: Apps dropdown content is data-driven from a typed `lib/apps/registry.ts` file (array of `{ slug, name, description, status, internal_path, external_url }`); adding a new app is a one-line registry change with NO IA / nav restructuring
+- [x] **NAV-03**: Apps dropdown today contains exactly one entry: **Abrigo** with name, one-line description ("Convex hedges for Colombian wage-earners — ∂²Π gamma"), status badge "Active" (color + icon + text per CROSS-09), primary link to `/apps/abrigo`
+- [x] **NAV-04**: Each Apps dropdown entry shows a secondary external-link affordance (icon-only, opens in new tab); Abrigo's secondary points to https://x.com/d2pfinabrigo
+- [x] **NAV-05**: Apps dropdown is keyboard-navigable (Tab focuses, Enter/Space opens, ArrowDown/ArrowUp cycle entries, Enter activates, Escape closes); announces "Apps menu, N entries" + per-entry "Abrigo, active, of N" to screen readers
+- [x] **NAV-06**: Apps dropdown closes on outside click, Escape, route change, and focus-out; never traps focus
+- [x] **NAV-07**: Top nav surfaces (in addition to Apps) the lab umbrella links: Research, Team, About, plus the language switcher; on mobile (<768px) the nav collapses to a single menu drawer that contains the Apps dropdown as a nested section
+- [x] **NAV-08**: `/apps` index page lists all apps (today: Abrigo) with the same registry-driven content; serves as the canonical URL agents can scrape if they don't read the dropdown HTML
 
 ### Research Lab Presence (umbrella scope — NOT scoped to Abrigo)
 
@@ -46,7 +46,7 @@ Each maps to exactly one phase in the roadmap.
 
 ### Abrigo App — Overview + Iteration Catalog (scoped under `/apps/abrigo/`)
 
-- [ ] **APP-01**: Abrigo app overview page at `/apps/abrigo` renders the app's mission (∂²Π gamma — convex hedges for Colombian wage-earner macro exposure), current iteration headline counts, links to iterations / instruments / dashboard sub-routes, prominent external link to https://x.com/d2pfinabrigo, and the app's status (Active)
+- [x] **APP-01**: Abrigo app overview page at `/apps/abrigo` renders the app's mission (∂²Π gamma — convex hedges for Colombian wage-earner macro exposure), current iteration headline counts, links to iterations / instruments / dashboard sub-routes, prominent external link to https://x.com/d2pfinabrigo, and the app's status (Active)
 - [ ] **ITER-01**: Iteration catalog at `/apps/abrigo/iterations` lists every Abrigo (Y, M, X) iteration regardless of status; no filter excludes FAIL or PARKED by default
 - [ ] **ITER-02**: Catalog cards render status with equal visual weight — same dimensions, same typography hierarchy, same prominence for PASS / FAIL / PARKED / IN_PROGRESS
 - [ ] **ITER-03**: Iteration detail page at `/apps/abrigo/iterations/{slug}/v{n}` shows spec → data → estimation → tests → disposition narrative with full evidence chain

@@ -8,29 +8,37 @@ function isSupportedLocale(value: string | undefined): value is SupportedLocale 
   return SUPPORTED_LOCALES.includes(value as SupportedLocale)
 }
 
+type MessageMap = Record<string, unknown>
+
+function isPlainObject(value: unknown): value is MessageMap {
+  return typeof value === 'object' && value !== null && !Array.isArray(value)
+}
+
+// Deep merge for translation maps. Plain-object keys recurse; leaf strings replace.
+// Required because multiple namespace files (common.json, nav.json) can share a top-level
+// key (e.g. "nav"); a shallow spread would clobber one side's children.
+function mergeMessages(...sources: readonly MessageMap[]): MessageMap {
+  const out: MessageMap = {}
+  for (const source of sources) {
+    for (const [key, value] of Object.entries(source)) {
+      const existing = out[key]
+      out[key] =
+        isPlainObject(existing) && isPlainObject(value) ? mergeMessages(existing, value) : value
+    }
+  }
+  return out
+}
+
 export default getRequestConfig(async () => {
   const cookieStore = await cookies()
   const cookieValue = cookieStore.get('NEXT_LOCALE')?.value
   const locale: SupportedLocale = isSupportedLocale(cookieValue) ? cookieValue : 'es-CO'
 
-  const commonMessages = (await import(`../messages/${locale}/common.json`)).default as Record<
-    string,
-    unknown
-  >
-  const labMessages = (await import(`../messages/${locale}/lab.json`)).default as Record<
-    string,
-    unknown
-  >
-  const navMessages = (await import(`../messages/${locale}/nav.json`)).default as Record<
-    string,
-    unknown
-  >
+  const commonMessages = (await import(`../messages/${locale}/common.json`)).default as MessageMap
+  const labMessages = (await import(`../messages/${locale}/lab.json`)).default as MessageMap
+  const navMessages = (await import(`../messages/${locale}/nav.json`)).default as MessageMap
 
-  const messages = {
-    ...commonMessages,
-    ...labMessages,
-    ...navMessages,
-  }
+  const messages = mergeMessages(commonMessages, labMessages, navMessages)
 
   return { locale, messages }
 })
