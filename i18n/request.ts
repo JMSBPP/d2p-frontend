@@ -13,8 +13,14 @@ export default getRequestConfig(async () => {
   const cookieValue = cookieStore.get('NEXT_LOCALE')?.value
   const locale: SupportedLocale = isSupportedLocale(cookieValue) ? cookieValue : 'es-CO'
 
-  const commonMessages = (await import(`../messages/${locale}/common.json`)).default as Record<string, string>
-  const labMessages = (await import(`../messages/${locale}/lab.json`)).default as Record<string, string>
+  const commonMessages = (await import(`../messages/${locale}/common.json`)).default as Record<
+    string,
+    string
+  >
+  const labMessages = (await import(`../messages/${locale}/lab.json`)).default as Record<
+    string,
+    string
+  >
 
   const messages = {
     ...commonMessages,

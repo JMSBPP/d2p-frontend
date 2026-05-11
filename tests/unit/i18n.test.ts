@@ -12,9 +12,11 @@ vi.mock('next/headers', () => ({
   cookies: vi.fn(),
 }))
 
+type Messages = Record<string, Record<string, unknown> | string>
+
 type RequestResult = {
   locale: string
-  messages: Record<string, string>
+  messages: Messages
 }
 
 async function invokeRequestConfig(cookieValue?: string): Promise<RequestResult> {
@@ -43,7 +45,10 @@ describe('i18n/request.ts', () => {
 
     expect(result.locale).toBe('es-CO')
     expect(result.messages).toBeDefined()
-    expect(result.messages['hero.wordmark']).toBe('WVS Finance')
+    // lab.json nested structure: messages.hero.wordmark
+    const hero = result.messages['hero'] as Record<string, string>
+    expect(hero).toBeDefined()
+    expect(hero['wordmark']).toBe('WVS Finance')
   })
 
   it('reads NEXT_LOCALE=en cookie and returns en messages', async () => {
@@ -51,8 +56,9 @@ describe('i18n/request.ts', () => {
 
     expect(result.locale).toBe('en')
     expect(result.messages).toBeDefined()
-    expect(result.messages['hero.wordmark']).toBe('WVS Finance')
-    expect(result.messages['hero.tagline']).toBe(
+    const hero = result.messages['hero'] as Record<string, string>
+    expect(hero['wordmark']).toBe('WVS Finance')
+    expect(hero['tagline']).toBe(
       'Verified convex hedges for wage-earner macro risk in frontier markets.',
     )
   })
@@ -61,7 +67,8 @@ describe('i18n/request.ts', () => {
     const result = await invokeRequestConfig(undefined)
 
     expect(result.locale).toBe('es-CO')
-    expect(result.messages['hero.tagline']).toBe(
+    const hero = result.messages['hero'] as Record<string, string>
+    expect(hero['tagline']).toBe(
       'Coberturas convexas verificadas para los riesgos macro del trabajador asalariado en mercados de frontera.',
     )
   })
@@ -76,8 +83,12 @@ describe('i18n/request.ts', () => {
   it('loads messages from messages/{locale}/common.json (language_switcher keys present)', async () => {
     const result = await invokeRequestConfig('es-CO')
 
-    // common.json keys should be merged into messages
-    expect(result.messages['language_switcher.label']).toBe('Idioma')
-    expect(result.messages['nav.skip_to_content']).toBe('Saltar al contenido')
+    // common.json nested structure: messages.language_switcher.label
+    const switcher = result.messages['language_switcher'] as Record<string, string>
+    expect(switcher).toBeDefined()
+    expect(switcher['label']).toBe('Idioma')
+
+    const nav = result.messages['nav'] as Record<string, string>
+    expect(nav['skip_to_content']).toBe('Saltar al contenido')
   })
 })

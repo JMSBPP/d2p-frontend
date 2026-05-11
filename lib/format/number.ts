@@ -8,11 +8,7 @@ export function formatNumber(
   return new Intl.NumberFormat(locale, options).format(value)
 }
 
-export function formatPercent(
-  value: number,
-  locale: SupportedLocale,
-  digits: number = 2,
-): string {
+export function formatPercent(value: number, locale: SupportedLocale, digits = 2): string {
   return new Intl.NumberFormat(locale, {
     style: 'percent',
     maximumFractionDigits: digits,
