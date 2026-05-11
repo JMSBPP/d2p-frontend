@@ -71,7 +71,7 @@ The scaffold homepage in this phase is a *placeholder* proving infrastructure wo
 - @vercel/mcp-handler@latest + @modelcontextprotocol/sdk@^1.26 (Phase 1 install; route handler scaffolded in Phase 4)
 - vitest@^2 + @testing-library/react + playwright@^1.49 + msw@^2
 - @axe-core/playwright
-- biome@^1.9
+- @biomejs/biome@^1.9 (the official npm package; the older standalone `biome` package at v0.3.x is unrelated)
 - lefthook@latest
 
 ### CI architecture

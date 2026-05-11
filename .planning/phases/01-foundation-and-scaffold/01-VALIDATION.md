@@ -40,27 +40,27 @@ created: 2026-05-11
 | Req ID | Test Type | Automated Command | File / Evidence | Status |
 |--------|-----------|-------------------|-----------------|--------|
 | FOUND-01 | structural | `test -f next.config.ts && test -f package.json && grep -q '"next":' package.json` | `package.json`, `next.config.ts`, Vercel deploy URL responds 200 | ⬜ pending |
-| FOUND-02 | unit + visual | `grep -q '@theme' app/globals.css && vitest run tests/tokens/` | `app/globals.css` has `@theme inline`; `tests/tokens/contrast.test.ts` enforces WCAG AA for every token pair | ⬜ pending |
-| FOUND-03 | unit + e2e | `vitest run tests/i18n/ && playwright test tests/e2e/locale-switch.spec.ts` | `i18n/request.ts`, `messages/es-CO/*.json`, `messages/en/*.json`, language switcher persists cookie across reload | ⬜ pending |
-| FOUND-04 | unit | `vitest run tests/velite/schema.test.ts` | `velite.config.ts` schema rejects iteration MDX missing `replication_hash`; refines FAIL→requires `disposition_memo` | ⬜ pending |
-| FOUND-05 | unit | `vitest run tests/wagmi/config.test.ts` | `lib/wagmi/config.ts` exports `celo`, `mainnet`, `base`, `arbitrum`, `optimism`; each chain has fallback transport | ⬜ pending |
+| FOUND-02 | unit + visual | `grep -q '@theme' app/globals.css && vitest run tests/unit/tokens.test.ts` | `app/globals.css` has `@theme inline`; `tests/unit/tokens.test.ts` enforces WCAG AA contrast for every token pair AND neutral-tint chroma > 0 | ⬜ pending |
+| FOUND-03 | unit + e2e | `vitest run tests/unit/i18n.test.ts && playwright test tests/e2e/locale-switch.spec.ts` | `i18n/request.ts`, `messages/es-CO/*.json`, `messages/en/*.json`, language switcher persists cookie across reload | ⬜ pending |
+| FOUND-04 | unit | `vitest run tests/unit/velite-schema.test.ts` | `velite.config.ts` schema rejects iteration MDX missing `replication_hash`; refines FAIL→requires `disposition_memo` | ⬜ pending |
+| FOUND-05 | unit | `vitest run tests/unit/wagmi-config.test.ts` | `lib/wagmi/config.ts` exports `celo`, `mainnet`, `base`, `arbitrum`, `optimism`; each chain has fallback transport | ⬜ pending |
 | FOUND-06 | structural | `test -f wagmi.config.ts && grep -q 'foundry' wagmi.config.ts` | `wagmi.config.ts` configured with foundry plugin pointing to placeholder `../abrigo/` path | ⬜ pending |
 | FOUND-07 | CI gate | GitHub Actions job `impeccable`: `npx impeccable detect --fail-on-error .` (flag verified live via `--help`) | `.github/workflows/ci.yml` contains job `impeccable`; sample PR with planted anti-pattern fails CI | ⬜ pending |
 | FOUND-08 | CI gate | GitHub Actions job `lighthouse`: `lhci autorun --collect.url=<preview> --assert.preset=lighthouse:recommended` with Moto G Power 3G profile | `lighthouserc.cjs` enforces LCP ≤ 2500ms, TBT ≤ 200ms; CI fails on regression | ⬜ pending |
 | FOUND-09 | CI gate | GitHub Actions job `a11y`: `playwright test --project=axe` | `tests/a11y/*.spec.ts` runs axe-core scan; all WCAG 2.2 AA violations fail build | ⬜ pending |
 | FOUND-10 | structural + manual | `test -f .env.example && grep -q -E 'NEXT_PUBLIC_' .env.example` + Vercel dashboard inspection | `.env.example` documents Production/Preview/Development scopes; `lib/env.ts` validates with `@t3-oss/env-nextjs` Zod schema; build fails on missing required vars | ⬜ pending |
-| FOUND-11 | architecture test | `vitest run tests/architecture/no-wallet-in-lab.spec.ts` | Test reads route group bundles; asserts `(lab)` pages do not import `wagmi` or `@rainbow-me/rainbowkit` | ⬜ pending |
+| FOUND-11 | architecture test | `vitest run tests/architecture/no-wallet-in-lab.test.ts` | Test reads route group source tree via fs/grep; asserts `(lab)/**/*.{ts,tsx}` does not import `wagmi` or `@rainbow-me/rainbowkit` | ⬜ pending |
 | FOUND-12 | e2e | `playwright test tests/e2e/agent-stubs.spec.ts` | GET `/llms.txt`, `/.well-known/mcp.json`, `/.well-known/openapi.yaml` all return 200 with valid content; root layout HTML contains JSON-LD `<script type="application/ld+json">` for WebSite + Organization | ⬜ pending |
 | FOUND-13 | structural + smoke | `test -f vitest.config.ts && test -f playwright.config.ts && pnpm test:quick` | Vitest + Playwright + MSW installed; example tests pass: `tests/unit/format.test.ts`, `tests/e2e/homepage.spec.ts`, `tests/api/health.test.ts`, `tests/architecture/no-wallet-in-lab.spec.ts`, `tests/a11y/homepage.spec.ts` | ⬜ pending |
 | CROSS-01 | CI gate | Re-uses FOUND-09 axe-core gate; top-5-template manual audit checklist for screen reader recorded in `docs/a11y-audit.md` | All scaffolded pages pass axe-core; checklist file exists | ⬜ pending |
 | CROSS-02 | e2e | `playwright test tests/e2e/locale-switch.spec.ts` | Stub homepage renders in es-CO and en; switcher persists choice via `NEXT_LOCALE` cookie; keyboard-navigable | ⬜ pending |
 | CROSS-03 | CI gate | Re-uses FOUND-08 Lighthouse gate | LCP < 2.5s on Moto G Power 3G profile against Vercel preview | ⬜ pending |
 | CROSS-04 | CI gate | Re-uses FOUND-07 impeccable gate plus a `tests/visual/anti-patterns.spec.ts` planted-pattern smoke that asserts impeccable would flag | impeccable detects every anti-pattern in test fixtures: nested cards, purple-to-blue gradient, oversized italic serif h1, eyebrow chip above h1, dark glow halo | ⬜ pending |
-| CROSS-05 | unit | `vitest run tests/tokens/neutral-tint.test.ts` | Test inspects token values: every neutral has nonzero chroma (`oklch` C > 0); pure black `#000` and pure white `#fff` rejected | ⬜ pending |
-| CROSS-06 | unit + e2e | `vitest run tests/format/currency.test.ts` + `playwright test tests/e2e/currency-default.spec.ts` | `lib/format/currency.ts` defaults to COP for es-CO, USD for en; user preference cookie overrides | ⬜ pending |
-| CROSS-07 | unit | `vitest run tests/format/date.test.ts` | `formatDate(new Date('2026-05-11'), 'es-CO')` returns `11 de mayo de 2026`; `'en'` returns `May 11, 2026`; no hardcoded `en-US` | ⬜ pending |
-| CROSS-08 | unit | `vitest run tests/format/number.test.ts` | `Intl.NumberFormat` wrapper handles locale-aware thousand separators and decimal marks; es-CO uses `.` thousands `,` decimal; en uses `,` thousands `.` decimal | ⬜ pending |
-| CROSS-09 | unit + visual | `vitest run tests/components/status-pill.test.ts` | `<StatusPill status="PASS">` renders icon + color + text label; the text label is present even when CSS strips color | ⬜ pending |
+| CROSS-05 | unit | `vitest run tests/unit/tokens.test.ts -t "neutral tint"` | Test inspects token values: every neutral has nonzero chroma (`oklch` C > 0); pure black `#000` and pure white `#fff` rejected | ⬜ pending |
+| CROSS-06 | unit + e2e | `vitest run tests/unit/format.test.ts -t "currency"` (no separate e2e — assertion is in unit) | `lib/format/currency.ts` defaults to COP for es-CO, USD for en; user preference cookie overrides | ⬜ pending |
+| CROSS-07 | unit | `vitest run tests/unit/format.test.ts -t "date"` | `formatDate(new Date('2026-05-11'), 'es-CO')` returns `11 de mayo de 2026`; `'en'` returns `May 11, 2026`; no hardcoded `en-US` | ⬜ pending |
+| CROSS-08 | unit | `vitest run tests/unit/format.test.ts -t "number"` | `Intl.NumberFormat` wrapper handles locale-aware thousand separators and decimal marks; es-CO uses `.` thousands `,` decimal; en uses `,` thousands `.` decimal | ⬜ pending |
+| CROSS-09 | unit + visual | `vitest run tests/unit/status-pill.test.ts` | `<StatusPill status="PASS">` renders icon + color + text label; the text label is present even when CSS strips color | ⬜ pending |
 | CROSS-10 | manual | Copy review checklist; impeccable copy-quality detector run | `docs/copy-review.md` checklist completed; no "Empower your X with our Y" phrasing detected by impeccable copy detector | ⬜ pending |
 
 *Status: ⬜ pending · ✅ green · ❌ red · ⚠️ flaky*
@@ -80,22 +80,20 @@ Wave 0 sets up the testing infrastructure that every subsequent task depends on:
 - [ ] `lefthook.yml` — pre-commit: biome check (staged), tsc --noEmit (incremental), velite content validation; commit-msg: commitlint conventional preset
 - [ ] `package.json` test scripts: `test:quick`, `test:all`, `test:unit`, `test:e2e`, `test:a11y`, `test:lighthouse`, `test:impeccable`
 - [ ] `tests/setup.ts` — shared test fixtures, MSW server, React Testing Library config
-- [ ] Stub test files (these are the templates for later phases):
-  - [ ] `tests/unit/format.test.ts`
+- [ ] Stub test files (these are the templates for later phases). Flat structure under tests/{unit,e2e,api,architecture,a11y,visual}/:
+  - [ ] `tests/unit/format.test.ts` (currency + date + number assertions in one file)
+  - [ ] `tests/unit/tokens.test.ts` (contrast + neutral-tint assertions in one file)
+  - [ ] `tests/unit/i18n.test.ts`
+  - [ ] `tests/unit/velite-schema.test.ts`
+  - [ ] `tests/unit/wagmi-config.test.ts`
+  - [ ] `tests/unit/status-pill.test.ts`
   - [ ] `tests/e2e/homepage.spec.ts`
-  - [ ] `tests/api/health.test.ts`
-  - [ ] `tests/architecture/no-wallet-in-lab.spec.ts`
-  - [ ] `tests/a11y/homepage.spec.ts`
-  - [ ] `tests/i18n/locale-switch.spec.ts`
-  - [ ] `tests/tokens/contrast.test.ts`
-  - [ ] `tests/tokens/neutral-tint.test.ts`
-  - [ ] `tests/velite/schema.test.ts`
-  - [ ] `tests/wagmi/config.test.ts`
-  - [ ] `tests/format/currency.test.ts`
-  - [ ] `tests/format/date.test.ts`
-  - [ ] `tests/format/number.test.ts`
-  - [ ] `tests/components/status-pill.test.ts`
+  - [ ] `tests/e2e/locale-switch.spec.ts`
   - [ ] `tests/e2e/agent-stubs.spec.ts`
+  - [ ] `tests/api/health.test.ts`
+  - [ ] `tests/architecture/no-wallet-in-lab.test.ts` (renamed from .spec.ts — Vitest runs it; Playwright excludes tests/architecture/)
+  - [ ] `tests/a11y/homepage.spec.ts`
+  - [ ] `tests/visual/anti-patterns.spec.ts`
 
 ---
 
