@@ -34,7 +34,16 @@
   4. An AI agent or crawler hitting `/.well-known/mcp.json`, `/.well-known/openapi.yaml`, and `/llms.txt` on the preview deployment receives valid (stub) responses — confirming agent-accessibility scaffolding is live from day one.
   5. The `(lab)`, `(dashboard)`, and `(defi)` route group layouts exist; a page added to `(lab)` provably does not hydrate wallet state (no RainbowKit provider in its layout tree).
 
-**Plans**: TBD
+**Plans**: 8 plans
+
+- [ ] 01-01-PLAN.md — Bootstrap Next.js 16.2 + TS + Vercel project + Wave 0 test harness (FOUND-01, FOUND-13) [wave 1]
+- [ ] 01-02-PLAN.md — Design tokens (Tailwind v4 @theme + shadcn) + StatusPill (FOUND-02, CROSS-05, CROSS-09) [wave 2]
+- [ ] 01-03-PLAN.md — next-intl v4 cookie-only i18n + lib/format wrappers + LanguageSwitcher (FOUND-03, CROSS-02, CROSS-06, CROSS-07, CROSS-08, CROSS-10) [wave 2]
+- [ ] 01-04-PLAN.md — Route groups (lab)/(dashboard)/(defi) + stub homepage + StructuredData JSON-LD (FOUND-11) [wave 3]
+- [ ] 01-05-PLAN.md — wagmi v2 config with 5 chains + Providers shell + wagmi.config.ts placeholder (FOUND-05, FOUND-06) [wave 2]
+- [ ] 01-06-PLAN.md — Velite schema + Next.js integration + sync-abrigo-content workflow scaffold (FOUND-04) [wave 2]
+- [ ] 01-07-PLAN.md — @t3-oss/env-nextjs + .env.example + agent-accessibility endpoints (llms.txt, mcp.json, openapi.yaml, /api/mcp stub, /api/health) (FOUND-10, FOUND-12) [wave 2]
+- [ ] 01-08-PLAN.md — CI workflow (7 parallel jobs) + Lighthouse Moto G + impeccable planted-pattern test + manual audit checklists (FOUND-07, FOUND-08, FOUND-09, CROSS-01, CROSS-03, CROSS-04) [wave 4]
 
 ---
 
