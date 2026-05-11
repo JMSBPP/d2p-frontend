@@ -11,8 +11,8 @@ Each maps to exactly one phase in the roadmap.
 ### Foundation
 
 - [x] **FOUND-01**: Next.js 16.2 App Router project scaffolded with TypeScript, deploys to Vercel preview-per-PR
-- [ ] **FOUND-02**: Tailwind v4 + shadcn/ui (Feb 2026) installed with OKLCH-based design tokens; `impeccable` design tokens authored in `app/globals.css` via `@theme`
-- [ ] **FOUND-03**: next-intl v4 i18n infrastructure for `es-CO` (Colombian Spanish, primary) and `en` (secondary); translations resolved at RSC render time
+- [x] **FOUND-02**: Tailwind v4 + shadcn/ui (Feb 2026) installed with OKLCH-based design tokens; `impeccable` design tokens authored in `app/globals.css` via `@theme`
+- [x] **FOUND-03**: next-intl v4 i18n infrastructure for `es-CO` (Colombian Spanish, primary) and `en` (secondary); translations resolved at RSC render time
 - [x] **FOUND-04**: Velite content pipeline with typed iteration schema — `status` is a compile-time enum `'PASS' | 'FAIL' | 'PARKED' | 'IN_PROGRESS'`, `notebook_url`, `dataset_ref`, `analysis_date`, `replication_hash` are required fields
 - [x] **FOUND-05**: wagmi v2 + viem v2 + @tanstack/react-query v5 configured with Celo mainnet (primary), Ethereum mainnet, Base, Arbitrum, Optimism; multi-RPC fallback transport per chain
 - [x] **FOUND-06**: wagmi CLI codegen pipeline reads contract ABIs from `../abrigo/` Foundry artifacts and emits typed TS contract clients
@@ -95,15 +95,15 @@ Each maps to exactly one phase in the roadmap.
 ### Cross-cutting
 
 - [ ] **CROSS-01**: Every page passes WCAG 2.2 AA conformance (axe-core CI + manual screen-reader audit on top 5 templates)
-- [ ] **CROSS-02**: Every page renders in es-CO and en; the language switcher is keyboard accessible and persists choice via cookie
+- [x] **CROSS-02**: Every page renders in es-CO and en; the language switcher is keyboard accessible and persists choice via cookie
 - [ ] **CROSS-03**: Every page hits LCP < 2.5s on Moto G Power 3G profile in Lighthouse CI
 - [ ] **CROSS-04**: No page nests cards inside cards; no purple-to-blue gradients; no oversized italic-serif heroes; no eyebrow chips above h1 — `impeccable detect` confirms in CI
-- [ ] **CROSS-05**: No page uses pure black or pure gray — all neutrals are tinted toward the lab's accent
-- [ ] **CROSS-06**: All currency values display in COP by default for es-CO users, USD by default for en users; user can override via persisted preference
-- [ ] **CROSS-07**: All dates use locale-aware formatting (es-CO: `11 de mayo de 2026`; en: `May 11, 2026`); no `en-US` hardcoded
-- [ ] **CROSS-08**: All numeric formatting (decimals, thousand separators) is locale-aware via `Intl.NumberFormat`
-- [ ] **CROSS-09**: Every chart, status indicator, and form error uses color + icon + text (never color-only)
-- [ ] **CROSS-10**: All copy is authored, not generated — no "Empower your X with our Y" phrasing; tone matches the lab's anti-fishing discipline
+- [x] **CROSS-05**: No page uses pure black or pure gray — all neutrals are tinted toward the lab's accent
+- [x] **CROSS-06**: All currency values display in COP by default for es-CO users, USD by default for en users; user can override via persisted preference
+- [x] **CROSS-07**: All dates use locale-aware formatting (es-CO: `11 de mayo de 2026`; en: `May 11, 2026`); no `en-US` hardcoded
+- [x] **CROSS-08**: All numeric formatting (decimals, thousand separators) is locale-aware via `Intl.NumberFormat`
+- [x] **CROSS-09**: Every chart, status indicator, and form error uses color + icon + text (never color-only)
+- [x] **CROSS-10**: All copy is authored, not generated — no "Empower your X with our Y" phrasing; tone matches the lab's anti-fishing discipline
 
 ## v2 Requirements
 
@@ -180,8 +180,8 @@ Populated by gsd-roadmapper — 2026-05-11.
 | Requirement | Phase | Status |
 |-------------|-------|--------|
 | FOUND-01 | Phase 1 | Complete |
-| FOUND-02 | Phase 1 | Pending |
-| FOUND-03 | Phase 1 | Pending |
+| FOUND-02 | Phase 1 | Complete |
+| FOUND-03 | Phase 1 | Complete |
 | FOUND-04 | Phase 1 | Complete |
 | FOUND-05 | Phase 1 | Complete |
 | FOUND-06 | Phase 1 | Complete |
@@ -193,15 +193,15 @@ Populated by gsd-roadmapper — 2026-05-11.
 | FOUND-12 | Phase 1 | Complete |
 | FOUND-13 | Phase 1 | Complete |
 | CROSS-01 | Phase 1 | Pending |
-| CROSS-02 | Phase 1 | Pending |
+| CROSS-02 | Phase 1 | Complete |
 | CROSS-03 | Phase 1 | Pending |
 | CROSS-04 | Phase 1 | Pending |
-| CROSS-05 | Phase 1 | Pending |
-| CROSS-06 | Phase 1 | Pending |
-| CROSS-07 | Phase 1 | Pending |
-| CROSS-08 | Phase 1 | Pending |
-| CROSS-09 | Phase 1 | Pending |
-| CROSS-10 | Phase 1 | Pending |
+| CROSS-05 | Phase 1 | Complete |
+| CROSS-06 | Phase 1 | Complete |
+| CROSS-07 | Phase 1 | Complete |
+| CROSS-08 | Phase 1 | Complete |
+| CROSS-09 | Phase 1 | Complete |
+| CROSS-10 | Phase 1 | Complete |
 | NAV-01 | Phase 1 | Pending |
 | NAV-02 | Phase 1 | Pending |
 | NAV-03 | Phase 1 | Pending |

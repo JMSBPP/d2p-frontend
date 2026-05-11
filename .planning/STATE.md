@@ -3,8 +3,8 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: completed
-stopped_at: Completed 01-06-PLAN.md
-last_updated: "2026-05-11T20:21:14.205Z"
+stopped_at: Completed 01-03-PLAN.md (i18n infrastructure + format wrappers + LanguageSwitcher)
+last_updated: "2026-05-11T20:21:49.872Z"
 progress:
   total_phases: 5
   completed_phases: 0
@@ -17,7 +17,7 @@ progress:
 
 **Last updated:** 2026-05-11
 **Session type:** Plan execution (01-01 complete)
-**Stopped at:** Completed 01-06-PLAN.md
+**Stopped at:** Completed 01-03-PLAN.md (i18n infrastructure + format wrappers + LanguageSwitcher)
 
 ---
 
@@ -61,6 +61,8 @@ Overall: 0/5 phases complete
 | Phase 01 P05 | 5 | 3 tasks | 4 files |
 | Phase 01 P07 | 8 | 2 tasks | 9 files |
 | Phase 01 P06 | 9 | 3 tasks | 8 files |
+| Phase 01 P02 | 9 | 3 tasks | 8 files |
+| Phase 01 P03 | 10 | 3 tasks | 15 files |
 
 ## Accumulated Context
 
@@ -79,6 +81,9 @@ Overall: 0/5 phases complete
 | iterationSchema exported from velite.config.ts for test isolation | Unit tests import schema directly without triggering Velite build pipeline; @vitest-environment node required due to esbuild TextEncoder invariant in jsdom | Pattern established for all future content schema tests |
 | sync-abrigo-content.yml is manual dispatch only in Phase 1 | workflow_dispatch gating prevents accidental runs; Phase 2 adds repository_dispatch trigger from wvs-finance/abrigo and fills rsync copy step | Phase 2 LAB-04 must fill in copy step before workflow is useful |
 | JSX test files require .tsx extension | TypeScript cannot parse JSX syntax in .ts files; renamed status-pill.test.ts to .tsx | All future component tests must use .tsx extension |
+| Message files use nested JSON objects not flat dot keys (Plan 01-03) | next-intl v4 getTranslations('namespace') expects { namespace: { key: value } } — not flat "namespace.key" strings | All message files in messages/{locale}/ use nested object format |
+| LanguageSwitcher uses two adjacent form/button elements (Plan 01-03) | Simpler a11y than dropdown menu: no JS needed, native form submission, keyboard-accessible by default | All locale-switching UI follows this pattern |
+| setLocale server action uses revalidatePath not router.refresh (Plan 01-03) | router.refresh causes stale CDN responses on Vercel preview; revalidatePath flushes cache correctly | All server actions that trigger re-render use revalidatePath |
 
 ### Critical Path Summary
 
