@@ -15,7 +15,7 @@
     "test:e2e": "playwright test --project=chromium",
     "test:a11y": "playwright test tests/a11y/",
     "test:lighthouse": "lhci autorun",
-    "test:impeccable": "npx impeccable detect .",
+    "test:impeccable": "npx impeccable detect app/",
     "prepare": "lefthook install",
     "contracts:gen": "wagmi generate"
   },

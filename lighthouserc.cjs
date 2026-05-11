@@ -2,6 +2,7 @@ module.exports = {
   ci: {
     collect: {
       numberOfRuns: 3,
+      url: [process.env.LHCI_COLLECT__URL ?? 'http://localhost:3000'],
       settings: {
         formFactor: 'mobile',
         screenEmulation: {
