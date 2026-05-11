@@ -19,9 +19,9 @@ Each maps to exactly one phase in the roadmap.
 - [ ] **FOUND-07**: `impeccable detect --fail-on-error` runs in CI on every PR; build fails on any detected anti-pattern
 - [ ] **FOUND-08**: Lighthouse CI performance budget enforces LCP < 2.5s on Moto G Power simulated 3G profile; budget runs on every PR preview
 - [ ] **FOUND-09**: axe-core accessibility tests run in CI; build fails on any WCAG 2.2 AA violation
-- [ ] **FOUND-10**: Vercel environment variables configured for Production, Preview, Development scopes with explicit naming convention (`NEXT_PUBLIC_*` only for safe-to-leak values)
+- [x] **FOUND-10**: Vercel environment variables configured for Production, Preview, Development scopes with explicit naming convention (`NEXT_PUBLIC_*` only for safe-to-leak values)
 - [ ] **FOUND-11**: Route group layout structure — `(lab)`, `(dashboard)`, `(defi)` — with RSC pages in `(lab)` never hydrating wallet state
-- [ ] **FOUND-12**: Agent-accessibility scaffold in place from day one: `/llms.txt`, `/.well-known/mcp.json`, `/.well-known/openapi.yaml` stub, JSON-LD `Article` and `Dataset` schemas on every content page
+- [x] **FOUND-12**: Agent-accessibility scaffold in place from day one: `/llms.txt`, `/.well-known/mcp.json`, `/.well-known/openapi.yaml` stub, JSON-LD `Article` and `Dataset` schemas on every content page
 - [x] **FOUND-13**: Vitest + Playwright + MSW test infrastructure with hooks for chain mocking via anvil fork
 
 ### Umbrella Navigation (highest priority — establishes the labs/apps architecture)
@@ -188,9 +188,9 @@ Populated by gsd-roadmapper — 2026-05-11.
 | FOUND-07 | Phase 1 | Pending |
 | FOUND-08 | Phase 1 | Pending |
 | FOUND-09 | Phase 1 | Pending |
-| FOUND-10 | Phase 1 | Pending |
+| FOUND-10 | Phase 1 | Complete |
 | FOUND-11 | Phase 1 | Pending |
-| FOUND-12 | Phase 1 | Pending |
+| FOUND-12 | Phase 1 | Complete |
 | FOUND-13 | Phase 1 | Complete |
 | CROSS-01 | Phase 1 | Pending |
 | CROSS-02 | Phase 1 | Pending |

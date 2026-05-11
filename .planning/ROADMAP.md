@@ -128,7 +128,7 @@
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Foundation and Scaffold | 2/8 | In Progress|  |
+| 1. Foundation and Scaffold | 4/8 | In Progress|  |
 | 2. Research Lab Presence and Iteration Catalog | 0/? | Not started | - |
 | 3. Data Layer and On-Chain Dashboard | 0/? | Not started | - |
 | 4. Agent Surface (MCP) | 0/? | Not started | - |
