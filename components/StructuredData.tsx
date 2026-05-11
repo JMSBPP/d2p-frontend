@@ -14,7 +14,7 @@ export function StructuredData(): React.JSX.Element {
   const organization: WithContext<Organization> = {
     '@context': 'https://schema.org',
     '@type': 'Organization',
-    name: 'WVS Finance / DS2P Labs',
+    name: 'd2p Finance / DS2P Labs',
     url: 'https://wvs.finance',
     description:
       'Research lab designing permissionless convex-hedge instruments for frontier markets',
@@ -24,7 +24,7 @@ export function StructuredData(): React.JSX.Element {
   const website: WithContext<WebSite> = {
     '@context': 'https://schema.org',
     '@type': 'WebSite',
-    name: 'WVS Finance',
+    name: 'd2p Finance',
     url: 'https://wvs.finance',
   }
 

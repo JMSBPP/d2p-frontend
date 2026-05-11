@@ -1,6 +1,6 @@
 # Pitfalls Research
 
-**Domain:** Agent-first DeFi research-lab frontend (WVS Finance / DS2P Labs)
+**Domain:** Agent-first DeFi research-lab frontend (d2p Finance / DS2P Labs)
 **Researched:** 2026-05-11
 **Confidence:** HIGH (impeccable rules confirmed against official source; DeFi/wagmi pitfalls confirmed via official docs and known issues; agent/MCP pitfalls confirmed via Block Engineering, MCP spec, and community; frontier-market pitfalls confirmed via Web Vitals data; Colombia network data from Opensignal Jan 2025)
 
@@ -241,13 +241,13 @@ Landing Page phase; copy reviewed before any page ships.
 ### Pitfall 13: AI Slop — Oversized Italic Serif Hero
 
 **What goes wrong:**
-The landing page h1 uses a large italic serif (Fraunces, Recoleta, Newsreader, Playfair Display, Cormorant, Tiempos) as the primary hero heading. Impeccable added this as a dedicated detector rule in 2025 precisely because it became the dominant AI-generated "editorial feel" pattern — every AI-scaffolded marketing page for late-2025 and 2026 products now uses it. WVS Finance is not a magazine; it is a research lab. The editorial-serif hero signals the wrong genre.
+The landing page h1 uses a large italic serif (Fraunces, Recoleta, Newsreader, Playfair Display, Cormorant, Tiempos) as the primary hero heading. Impeccable added this as a dedicated detector rule in 2025 precisely because it became the dominant AI-generated "editorial feel" pattern — every AI-scaffolded marketing page for late-2025 and 2026 products now uses it. d2p Finance is not a magazine; it is a research lab. The editorial-serif hero signals the wrong genre.
 
 **Why it happens:**
 Design tools and LLMs reached for oversized italic serifs as a reaction to the Inter/sans-serif monoculture. By late 2025 this reaction had itself become a monoculture. Fraunces is on the impeccable overused-font blocklist specifically for this reason.
 
 **How to avoid:**
-Never use an italic serif at h1 display size as the primary heading. If a serif is chosen for the lab's typographic identity, it must be used at a controlled size with upright weight. The h1 for WVS Finance should communicate precision, not romance. Run `npx impeccable detect` to catch this mechanically.
+Never use an italic serif at h1 display size as the primary heading. If a serif is chosen for the lab's typographic identity, it must be used at a controlled size with upright weight. The h1 for d2p Finance should communicate precision, not romance. Run `npx impeccable detect` to catch this mechanically.
 
 **Warning signs:**
 `font-family: 'Fraunces', 'Recoleta', 'Playfair Display', 'Cormorant'` on any `h1` element. `font-style: italic` combined with a serif font at `font-size` above 48px.
@@ -1071,5 +1071,5 @@ Landing Page phase (copy review before any page ships).
 - [Recharts accessibilityLayer](https://recharts.org/en-US/api) — accessible chart prop
 
 ---
-*Pitfalls research for: Agent-first DeFi research-lab frontend (WVS Finance / DS2P Labs)*
+*Pitfalls research for: Agent-first DeFi research-lab frontend (d2p Finance / DS2P Labs)*
 *Researched: 2026-05-11*

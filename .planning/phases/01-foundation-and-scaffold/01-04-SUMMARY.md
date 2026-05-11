@@ -30,7 +30,7 @@
 - `tests/architecture/no-wallet-in-lab.test.ts` filled with real fs/grep assertions; passes with 8 cases verifying both `(lab)` and `(apps)` are wallet-free
 
 ### Task 3 — Stub homepage
-- `app/(lab)/page.tsx` renders wordmark "WVS Finance" + tagline (cookie-resolved locale) + four `<IterationCountTile>` cards using `<StatusPill>` from Plan 02
+- `app/(lab)/page.tsx` renders wordmark "d2p Finance" + tagline (cookie-resolved locale) + four `<IterationCountTile>` cards using `<StatusPill>` from Plan 02
 - Hardcoded counts: 3 PASS / 2 FAIL / 1 PARKED / 1 IN_PROGRESS (sourced from PROJECT.md empirical state)
 - Authored both locales (es-CO + en); zero impeccable anti-patterns; status token contrast fix applied during this task to satisfy WCAG AA against the cream canvas
 

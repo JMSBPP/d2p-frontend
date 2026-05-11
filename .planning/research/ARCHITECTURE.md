@@ -461,7 +461,7 @@ The `status` field is required and typed — the UI cannot accidentally omit FAI
 ### llms.txt
 
 A static `public/llms.txt` file is committed to the repo. It is not generated at runtime. It lists:
-- What WVS Finance / DS2P Labs is
+- What d2p Finance / DS2P Labs is
 - All iteration slugs with their current status
 - Links to MCP endpoint, API documentation routes
 - Links to key RSC pages
@@ -478,7 +478,7 @@ A Next.js route at `app/.well-known/mcp/route.ts` returns JSON describing the MC
     {
       "url": "https://d2p.finance/api/mcp",
       "transport": ["streamable-http", "sse"],
-      "description": "WVS Finance protocol and research state"
+      "description": "d2p Finance protocol and research state"
     }
   ]
 }
@@ -723,5 +723,5 @@ This is the dependency-driven sequence that should inform roadmap phase structur
 
 ---
 
-*Architecture research for: agent-first DeFi research-lab frontend (WVS Finance / DS2P Labs)*
+*Architecture research for: agent-first DeFi research-lab frontend (d2p Finance / DS2P Labs)*
 *Researched: 2026-05-11*

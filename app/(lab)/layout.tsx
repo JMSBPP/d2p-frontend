@@ -7,7 +7,7 @@ export default function LabLayout({ children }: { children: React.ReactNode }) {
   return (
     <div className="min-h-screen flex flex-col">
       <header className="flex items-center justify-between p-6 border-b border-border-default">
-        <span className="font-semibold text-text-primary">WVS Finance</span>
+        <span className="font-semibold text-text-primary">d2p Finance</span>
         <LanguageSwitcher />
       </header>
       <main className="flex-1 max-w-4xl mx-auto w-full px-6 py-12">{children}</main>

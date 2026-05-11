@@ -1,8 +1,8 @@
-# WVS Finance Frontend (d2p/frontend)
+# d2p Finance Frontend (d2p/frontend)
 
 ## What This Is
 
-The public-facing web surface for **d2-π (DS2P Labs / WVS Finance)** — a research lab that designs and ships permissionless convex-hedge instruments on EVM ecosystems, targeting macro-risk exposure for wage earners in frontier and emerging markets (Colombia as the first empirical case).
+The public-facing web surface for **d2-π (DS2P Labs / d2p Finance)** — a research lab that designs and ships permissionless convex-hedge instruments on EVM ecosystems, targeting macro-risk exposure for wage earners in frontier and emerging markets (Colombia as the first empirical case).
 
 **This site is the labs UMBRELLA HOST.** It is not a single product site. The lab incubates multiple hedge-instrument *apps* over time, each with its own subdomain of the site under `/apps/<instrument-family>`. The first and currently sole app is **Abrigo** (∂²Π — gamma; convex hedges targeting Colombian wage-earner macro exposure). Future apps under d2-π will appear as additional entries in the same top-nav "Apps" dropdown without restructuring the site.
 
@@ -74,7 +74,7 @@ If everything else fails, this must work: an agent or a human can land on the la
 ## Context
 
 **Organizational context:**
-- WVS Finance org on GitHub: https://github.com/wvs-finance (12 repos, public + private)
+- d2p Finance org on GitHub: https://github.com/wvs-finance (12 repos, public + private)
 - Parent: DS2P (Data + Domain to Protocol) Labs
 - Core thesis: convex hedges for wage-earner macro risks that block the wage→capital transition, validated through structural econometrics before deployment
 - Anti-fishing discipline: pre-committed specs, decision-citation blocks, HALT-on-spec-conflict — this culture must show through in the UI's epistemic honesty (show failures as prominently as successes)

@@ -143,7 +143,7 @@ The scaffold homepage in this phase is a *placeholder* proving infrastructure wo
 - Anvil fork-test harness is **scaffolded but not exercised** in Phase 1 (no contract reads yet). The pattern is in place for Phase 3.
 
 ### Phase 1 stub homepage (proves scaffold)
-- Minimal content: site wordmark "WVS Finance" (no logo image yet — design Phase 2), one-line tagline pulled from PROJECT.md Core Value (translated both locales), iteration headline counts (hardcoded: 3 PASS, 2 FAIL, 1 PARKED, 1 IN_PROGRESS — sourced from PROJECT.md empirical-state snapshot), language switcher in header.
+- Minimal content: site wordmark "d2p Finance" (no logo image yet — design Phase 2), one-line tagline pulled from PROJECT.md Core Value (translated both locales), iteration headline counts (hardcoded: 3 PASS, 2 FAIL, 1 PARKED, 1 IN_PROGRESS — sourced from PROJECT.md empirical-state snapshot), language switcher in header.
 - No hero animation, no marketing CTA, no testimonials. **The placeholder must already obey impeccable** — no Inter, no purple gradients, no eyebrow chip, no oversized italic serif, no cards-in-cards.
 - This page is deleted/replaced in Phase 2. Its job in Phase 1 is to prove the infrastructure.
 

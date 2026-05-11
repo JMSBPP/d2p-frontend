@@ -5,7 +5,7 @@ test('/llms.txt returns 200 plaintext with expected content', async ({ request }
   expect(r.status()).toBe(200)
   expect(r.headers()['content-type']).toContain('text/plain')
   const body = await r.text()
-  expect(body).toContain('WVS Finance')
+  expect(body).toContain('d2p Finance')
   expect(body).toContain('/api/mcp')
 })
 

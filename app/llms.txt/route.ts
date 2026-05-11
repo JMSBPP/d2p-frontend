@@ -2,7 +2,7 @@ export const dynamic = 'force-static'
 
 export function GET() {
   const body = [
-    '# WVS Finance / DS2P Labs',
+    '# d2p Finance / DS2P Labs',
     '',
     'Research lab designing permissionless convex-hedge instruments for frontier markets.',
     '',

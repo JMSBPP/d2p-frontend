@@ -13,7 +13,7 @@ progress:
   percent: 100
 ---
 
-# Project State: WVS Finance Frontend (d2p/frontend)
+# Project State: d2p Finance Frontend (d2p/frontend)
 
 **Last updated:** 2026-05-11
 **Session type:** Plan execution (01-01 complete)

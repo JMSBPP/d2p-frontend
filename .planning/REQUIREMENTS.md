@@ -1,4 +1,4 @@
-# Requirements: WVS Finance Frontend (d2p/frontend)
+# Requirements: d2p Finance Frontend (d2p/frontend)
 
 **Defined:** 2026-05-11
 **Core Value:** Make the lab's research outputs and live hedging instruments accessible — to humans browsing, to participants transacting, and to AI agents consuming — through a single coherent surface that treats agent-first interaction as a primary design constraint.

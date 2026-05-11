@@ -23,7 +23,7 @@ tech_stack:
   added: []
   patterns:
     - "next-intl v4 without routing: getRequestConfig reads NEXT_LOCALE cookie via cookies() from next/headers"
-    - "Message files: nested JSON objects (not flat dot-notation keys) — e.g. { hero: { wordmark: 'WVS Finance' } }"
+    - "Message files: nested JSON objects (not flat dot-notation keys) — e.g. { hero: { wordmark: 'd2p Finance' } }"
     - "LanguageSwitcher as server component: two <form action={serverAction}> elements with submit buttons"
     - "setLocale server action: cookies().set + revalidatePath('/', 'layout') — NOT router.refresh"
     - "Vitest mocking next-intl/server: vi.mock with getRequestConfig as identity wrapper to bypass RSC check"
@@ -96,7 +96,7 @@ export default getRequestConfig(async () => {
 // messages/es-CO/lab.json
 {
   "hero": {
-    "wordmark": "WVS Finance",
+    "wordmark": "d2p Finance",
     "tagline": "Coberturas convexas verificadas para los riesgos macro del trabajador asalariado en mercados de frontera."
   },
   "iteration_counts": { "heading": "Iteraciones publicadas", "pass": "Confirmadas", ... }
@@ -158,7 +158,7 @@ Locale defaults: `es-CO` → `COP`, `en` → `USD`. Override via `{ currency: 'U
 | `nav` | `skip_to_content` | "Saltar al contenido" | "Skip to content" |
 | `footer` | `org_link` | "Organización en GitHub" | "Organization on GitHub" |
 | `language_switcher` | `label`, `es-CO`, `en` | "Idioma" | "Language" |
-| `hero` | `wordmark`, `tagline` | "WVS Finance" / tagline | "WVS Finance" / tagline |
+| `hero` | `wordmark`, `tagline` | "d2p Finance" / tagline | "d2p Finance" / tagline |
 | `iteration_counts` | `heading`, `pass`, `fail`, `parked`, `in_progress` | Spanish | English |
 | `status` | `pass.label`, `fail.label`, `parked.label`, `in_progress.label` | PASA/FALLA/... | PASS/FAIL/... |
 

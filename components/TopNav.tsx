@@ -20,7 +20,7 @@ export async function TopNav() {
         href="/"
         className="text-base font-semibold text-text-primary hover:text-accent-default focus:outline-none focus-visible:ring-2 focus-visible:ring-color-ring rounded"
       >
-        WVS Finance
+        d2p Finance
       </Link>
 
       {/* Center/right: desktop nav items (hidden on mobile) */}

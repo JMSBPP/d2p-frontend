@@ -266,7 +266,7 @@ globals.css), 28 todo stubs.
 **4. [Rule 1 - Bug] tokens.test.ts fails because globals.css has default Next.js content**
 - **Found during:** Task 3 vitest run
 - **Issue:** The plan's `it.skipIf(!existsSync(globalsPath))` skips if the file doesn't
-  exist, but globals.css exists (from scaffold) without the WVS Finance semantic tokens.
+  exist, but globals.css exists (from scaffold) without the d2p Finance semantic tokens.
   Tests would fail instead of skip.
 - **Fix:** Changed `skipIf` condition to `hasSemanticTokens()` helper that checks for
   `--color-bg-canvas` presence in the CSS file content. Tests now skip gracefully until
@@ -287,7 +287,7 @@ globals.css), 28 todo stubs.
 - **Issue:** The scaffolded layout.tsx used `next/font/google` with Geist fonts, which is
   on the impeccable `overused-font` blocklist. Running impeccable in CI would fail on PR #1.
 - **Fix:** Removed Geist font imports, replaced with plain system font via CSS. Updated
-  metadata to WVS Finance branding.
+  metadata to d2p Finance branding.
 - **Files modified:** app/layout.tsx
 - **Commit:** f05fffd
 

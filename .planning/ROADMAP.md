@@ -1,4 +1,4 @@
-# Roadmap: WVS Finance Frontend (d2p/frontend)
+# Roadmap: d2p Finance Frontend (d2p/frontend)
 
 **Milestone:** v1 — Uniswap Hook Incubator Cohort 9 Hookathon demo (~June 2, 2026)
 **Created:** 2026-05-11

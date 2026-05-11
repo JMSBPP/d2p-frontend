@@ -48,7 +48,7 @@ describe('i18n/request.ts', () => {
     // lab.json nested structure: messages.hero.wordmark
     const hero = result.messages.hero as Record<string, string>
     expect(hero).toBeDefined()
-    expect(hero.wordmark).toBe('WVS Finance')
+    expect(hero.wordmark).toBe('d2p Finance')
   })
 
   it('reads NEXT_LOCALE=en cookie and returns en messages', async () => {
@@ -57,7 +57,7 @@ describe('i18n/request.ts', () => {
     expect(result.locale).toBe('en')
     expect(result.messages).toBeDefined()
     const hero = result.messages.hero as Record<string, string>
-    expect(hero.wordmark).toBe('WVS Finance')
+    expect(hero.wordmark).toBe('d2p Finance')
     expect(hero.tagline).toBe(
       'Verified convex hedges for wage-earner macro risk in frontier markets.',
     )

@@ -7,7 +7,7 @@ export function GET() {
         url: '/api/mcp',
         transport: ['streamable-http', 'sse'],
         description:
-          'WVS Finance protocol and research state (Phase 1 stub — tools added in Phase 4)',
+          'd2p Finance protocol and research state (Phase 1 stub — tools added in Phase 4)',
       },
     ],
   }

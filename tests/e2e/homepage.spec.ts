@@ -2,7 +2,7 @@ import { expect, test } from '@playwright/test'
 
 test('homepage renders wordmark and tagline in es-CO by default', async ({ page }) => {
   await page.goto('/')
-  await expect(page.getByRole('heading', { level: 1 })).toContainText('WVS Finance')
+  await expect(page.getByRole('heading', { level: 1 })).toContainText('d2p Finance')
   await expect(page.getByText(/Coberturas|Verified/)).toBeVisible()
 })
 

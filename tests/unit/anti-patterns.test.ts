@@ -35,51 +35,91 @@ function runImpeccable(path: string): { stdout: string; exitCode: number } {
   return { stdout, exitCode }
 }
 
+// 30s per test: `npx impeccable` may resolve, download, and scan; the default
+// 5s timeout is too tight even on warm caches.
+const IMPECCABLE_TIMEOUT_MS = 30_000
+
 describe('impeccable anti-pattern detector', () => {
-  it('detects each planted anti-pattern in fixtures (non-zero exit)', () => {
-    const { exitCode } = runImpeccable('tests/unit/fixtures/anti-patterns.html')
+  it(
+    'detects each planted anti-pattern in fixtures (non-zero exit)',
+    () => {
+      const { exitCode } = runImpeccable('tests/unit/fixtures/anti-patterns.html')
 
-    // Primary signal: non-zero exit is the strategy the CI workflow relies on.
-    expect(exitCode).not.toBe(0)
-  })
+      // Primary signal: non-zero exit is the strategy the CI workflow relies on.
+      expect(exitCode).not.toBe(0)
+    },
+    IMPECCABLE_TIMEOUT_MS,
+  )
 
-  it('detects overused font (Inter) in fixtures', () => {
-    const { stdout } = runImpeccable('tests/unit/fixtures/anti-patterns.html')
-    expect(stdout).toMatch(/inter|overused.font/i)
-  })
+  it(
+    'detects overused font (Inter) in fixtures',
+    () => {
+      const { stdout } = runImpeccable('tests/unit/fixtures/anti-patterns.html')
+      expect(stdout).toMatch(/inter|overused.font/i)
+    },
+    IMPECCABLE_TIMEOUT_MS,
+  )
 
-  it('detects AI color palette (purple gradient) in fixtures', () => {
-    const { stdout } = runImpeccable('tests/unit/fixtures/anti-patterns.html')
-    expect(stdout).toMatch(/purple|violet|ai.color.palette/i)
-  })
+  it(
+    'detects AI color palette (purple gradient) in fixtures',
+    () => {
+      const { stdout } = runImpeccable('tests/unit/fixtures/anti-patterns.html')
+      expect(stdout).toMatch(/purple|violet|ai.color.palette/i)
+    },
+    IMPECCABLE_TIMEOUT_MS,
+  )
 
-  it('detects pure black background in fixtures', () => {
-    const { stdout } = runImpeccable('tests/unit/fixtures/anti-patterns.html')
-    expect(stdout).toMatch(/pure.black|#000000/i)
-  })
+  it(
+    'detects pure black background in fixtures',
+    () => {
+      const { stdout } = runImpeccable('tests/unit/fixtures/anti-patterns.html')
+      expect(stdout).toMatch(/pure.black|#000000/i)
+    },
+    IMPECCABLE_TIMEOUT_MS,
+  )
 
-  it('detects gradient text in fixtures', () => {
-    const { stdout } = runImpeccable('tests/unit/fixtures/anti-patterns.html')
-    expect(stdout).toMatch(/gradient.text|background.clip/i)
-  })
+  it(
+    'detects gradient text in fixtures',
+    () => {
+      const { stdout } = runImpeccable('tests/unit/fixtures/anti-patterns.html')
+      expect(stdout).toMatch(/gradient.text|background.clip/i)
+    },
+    IMPECCABLE_TIMEOUT_MS,
+  )
 
-  it('detects dark glow in fixtures', () => {
-    const { stdout } = runImpeccable('tests/unit/fixtures/anti-patterns.html')
-    expect(stdout).toMatch(/dark.glow|glow|box.shadow/i)
-  })
+  it(
+    'detects dark glow in fixtures',
+    () => {
+      const { stdout } = runImpeccable('tests/unit/fixtures/anti-patterns.html')
+      expect(stdout).toMatch(/dark.glow|glow|box.shadow/i)
+    },
+    IMPECCABLE_TIMEOUT_MS,
+  )
 
-  it('detects gray text on colored background (low contrast) in fixtures', () => {
-    const { stdout } = runImpeccable('tests/unit/fixtures/anti-patterns.html')
-    expect(stdout).toMatch(/low.contrast|contrast|#6b7280/i)
-  })
+  it(
+    'detects gray text on colored background (low contrast) in fixtures',
+    () => {
+      const { stdout } = runImpeccable('tests/unit/fixtures/anti-patterns.html')
+      expect(stdout).toMatch(/low.contrast|contrast|#6b7280/i)
+    },
+    IMPECCABLE_TIMEOUT_MS,
+  )
 
-  it('detects side-tab accent border in fixtures', () => {
-    const { stdout } = runImpeccable('tests/unit/fixtures/anti-patterns.html')
-    expect(stdout).toMatch(/side.tab|border.left/i)
-  })
+  it(
+    'detects side-tab accent border in fixtures',
+    () => {
+      const { stdout } = runImpeccable('tests/unit/fixtures/anti-patterns.html')
+      expect(stdout).toMatch(/side.tab|border.left/i)
+    },
+    IMPECCABLE_TIMEOUT_MS,
+  )
 
-  it('clean app/ source returns exit code 0', () => {
-    const { exitCode } = runImpeccable('app/')
-    expect(exitCode).toBe(0)
-  })
+  it(
+    'clean app/ source returns exit code 0',
+    () => {
+      const { exitCode } = runImpeccable('app/')
+      expect(exitCode).toBe(0)
+    },
+    IMPECCABLE_TIMEOUT_MS,
+  )
 })

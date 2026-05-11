@@ -360,5 +360,5 @@ pnpm add -D turbo
 
 ---
 
-*Stack research for: WVS Finance / DS2P Labs — d2p/frontend (agent-first DeFi research-lab frontend)*
+*Stack research for: d2p Finance / DS2P Labs — d2p/frontend (agent-first DeFi research-lab frontend)*
 *Researched: 2026-05-11*

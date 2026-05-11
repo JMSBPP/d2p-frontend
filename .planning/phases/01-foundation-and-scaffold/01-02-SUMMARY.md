@@ -82,7 +82,7 @@ completed: "2026-05-11"
 
 ## Accomplishments
 
-- Replaced the default Next.js globals.css with a complete WVS Finance semantic token system: 13 OKLCH variables in `:root` (light) + `.dark` (dark mode), bridged to Tailwind utilities via `@theme inline`. Every neutral has nonzero chroma tinted toward hue 165 (teal-green). No pure black, white, or stone/gray/zinc tokens.
+- Replaced the default Next.js globals.css with a complete d2p Finance semantic token system: 13 OKLCH variables in `:root` (light) + `.dark` (dark mode), bridged to Tailwind utilities via `@theme inline`. Every neutral has nonzero chroma tinted toward hue 165 (teal-green). No pure black, white, or stone/gray/zinc tokens.
 - Initialized shadcn/ui new-york style with `components.json`, inlined `button.tsx` and `badge.tsx`. shadcn alias tokens (`--color-primary`, `--color-background`, etc.) pre-wired in the `@theme inline` block to avoid follow-up fixes.
 - Built `StatusPill` component that renders color + icon + text for all 4 iteration statuses. Uses `<output>` for semantic HTML5 status role, `aria-hidden` on icons, real DOM text label — satisfying CROSS-09 even if CSS is stripped.
 

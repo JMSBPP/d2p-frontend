@@ -3,10 +3,10 @@ export const dynamic = 'force-static'
 export function GET() {
   const body = `openapi: 3.1.0
 info:
-  title: WVS Finance Public API
+  title: d2p Finance Public API
   version: 0.1.0
   description: |
-    Public REST surface for WVS Finance / DS2P Labs.
+    Public REST surface for d2p Finance / DS2P Labs.
     Phase 1 ships only /api/health. Phase 3 adds /api/dashboard and /api/econometrics.
 servers:
   - url: https://wvs.finance

@@ -10,7 +10,7 @@ import './globals.css'
 // Provides: i18n context, theme context, JSON-LD structured data, global TopNav.
 
 export const metadata: Metadata = {
-  title: 'WVS Finance',
+  title: 'd2p Finance',
   description: 'Verified convex hedges for wage-earner macro risk in frontier markets',
 }
 

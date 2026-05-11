@@ -100,7 +100,7 @@
 - `.editorconfig`, `.gitattributes` committed.
 
 **Stub homepage:**
-- Wordmark "WVS Finance", tagline in both locales, hardcoded iteration counts (3 PASS, 2 FAIL, 1 PARKED, 1 IN_PROGRESS), language switcher.
+- Wordmark "d2p Finance", tagline in both locales, hardcoded iteration counts (3 PASS, 2 FAIL, 1 PARKED, 1 IN_PROGRESS), language switcher.
 - Zero impeccable violations — no Inter, no gradients, no nested cards, no eyebrow chip, no oversized italic serif.
 
 ### Claude's Discretion
@@ -590,7 +590,7 @@ export function StructuredData() {
   const organization: WithContext<Organization> = {
     '@context': 'https://schema.org',
     '@type': 'Organization',
-    name: 'WVS Finance / DS2P Labs',
+    name: 'd2p Finance / DS2P Labs',
     url: 'https://wvs.finance',
     description: 'Research lab designing permissionless convex-hedge instruments for frontier markets',
     sameAs: ['https://github.com/wvs-finance'],
@@ -599,7 +599,7 @@ export function StructuredData() {
   const website: WithContext<WebSite> = {
     '@context': 'https://schema.org',
     '@type': 'WebSite',
-    name: 'WVS Finance',
+    name: 'd2p Finance',
     url: 'https://wvs.finance',
   }
 

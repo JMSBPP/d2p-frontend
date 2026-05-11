@@ -331,5 +331,5 @@ No direct competitors exist in the specific intersection of (research lab + DeFi
 
 ---
 
-*Feature research for: WVS Finance / DS2P Labs — agent-first DeFi research-lab frontend*
+*Feature research for: d2p Finance / DS2P Labs — agent-first DeFi research-lab frontend*
 *Researched: 2026-05-11*
