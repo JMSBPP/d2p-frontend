@@ -162,79 +162,87 @@ Explicitly excluded. Documented to prevent scope creep.
 
 ## Traceability
 
-Empty initially. Populated by gsd-roadmapper during roadmap creation.
+Populated by gsd-roadmapper — 2026-05-11.
 
 | Requirement | Phase | Status |
 |-------------|-------|--------|
-| FOUND-01 | TBD | Pending |
-| FOUND-02 | TBD | Pending |
-| FOUND-03 | TBD | Pending |
-| FOUND-04 | TBD | Pending |
-| FOUND-05 | TBD | Pending |
-| FOUND-06 | TBD | Pending |
-| FOUND-07 | TBD | Pending |
-| FOUND-08 | TBD | Pending |
-| FOUND-09 | TBD | Pending |
-| FOUND-10 | TBD | Pending |
-| FOUND-11 | TBD | Pending |
-| FOUND-12 | TBD | Pending |
-| FOUND-13 | TBD | Pending |
-| LAB-01 | TBD | Pending |
-| LAB-02 | TBD | Pending |
-| LAB-03 | TBD | Pending |
-| LAB-04 | TBD | Pending |
-| LAB-05 | TBD | Pending |
-| LAB-06 | TBD | Pending |
-| ITER-01 | TBD | Pending |
-| ITER-02 | TBD | Pending |
-| ITER-03 | TBD | Pending |
-| ITER-04 | TBD | Pending |
-| ITER-05 | TBD | Pending |
-| ITER-06 | TBD | Pending |
-| ITER-07 | TBD | Pending |
-| ITER-08 | TBD | Pending |
-| ITER-09 | TBD | Pending |
-| DASH-01 | TBD | Pending |
-| DASH-02 | TBD | Pending |
-| DASH-03 | TBD | Pending |
-| DASH-04 | TBD | Pending |
-| DASH-05 | TBD | Pending |
-| DASH-06 | TBD | Pending |
-| DASH-07 | TBD | Pending |
-| DASH-08 | TBD | Pending |
-| AGENT-01 | TBD | Pending |
-| AGENT-02 | TBD | Pending |
-| AGENT-03 | TBD | Pending |
-| AGENT-04 | TBD | Pending |
-| AGENT-05 | TBD | Pending |
-| AGENT-06 | TBD | Pending |
-| AGENT-07 | TBD | Pending |
-| AGENT-08 | TBD | Pending |
-| AGENT-09 | TBD | Pending |
-| AGENT-10 | TBD | Pending |
-| DEFI-01 | TBD | Pending |
-| DEFI-02 | TBD | Pending |
-| DEFI-03 | TBD | Pending |
-| DEFI-04 | TBD | Pending |
-| DEFI-05 | TBD | Pending |
-| DEFI-06 | TBD | Pending |
-| DEFI-07 | TBD | Pending |
-| CROSS-01 | TBD | Pending |
-| CROSS-02 | TBD | Pending |
-| CROSS-03 | TBD | Pending |
-| CROSS-04 | TBD | Pending |
-| CROSS-05 | TBD | Pending |
-| CROSS-06 | TBD | Pending |
-| CROSS-07 | TBD | Pending |
-| CROSS-08 | TBD | Pending |
-| CROSS-09 | TBD | Pending |
-| CROSS-10 | TBD | Pending |
+| FOUND-01 | Phase 1 | Pending |
+| FOUND-02 | Phase 1 | Pending |
+| FOUND-03 | Phase 1 | Pending |
+| FOUND-04 | Phase 1 | Pending |
+| FOUND-05 | Phase 1 | Pending |
+| FOUND-06 | Phase 1 | Pending |
+| FOUND-07 | Phase 1 | Pending |
+| FOUND-08 | Phase 1 | Pending |
+| FOUND-09 | Phase 1 | Pending |
+| FOUND-10 | Phase 1 | Pending |
+| FOUND-11 | Phase 1 | Pending |
+| FOUND-12 | Phase 1 | Pending |
+| FOUND-13 | Phase 1 | Pending |
+| CROSS-01 | Phase 1 | Pending |
+| CROSS-02 | Phase 1 | Pending |
+| CROSS-03 | Phase 1 | Pending |
+| CROSS-04 | Phase 1 | Pending |
+| CROSS-05 | Phase 1 | Pending |
+| CROSS-06 | Phase 1 | Pending |
+| CROSS-07 | Phase 1 | Pending |
+| CROSS-08 | Phase 1 | Pending |
+| CROSS-09 | Phase 1 | Pending |
+| CROSS-10 | Phase 1 | Pending |
+| LAB-01 | Phase 2 | Pending |
+| LAB-02 | Phase 2 | Pending |
+| LAB-03 | Phase 2 | Pending |
+| LAB-04 | Phase 2 | Pending |
+| LAB-05 | Phase 2 | Pending |
+| LAB-06 | Phase 2 | Pending |
+| ITER-01 | Phase 2 | Pending |
+| ITER-02 | Phase 2 | Pending |
+| ITER-03 | Phase 2 | Pending |
+| ITER-04 | Phase 2 | Pending |
+| ITER-05 | Phase 2 | Pending |
+| ITER-06 | Phase 2 | Pending |
+| ITER-07 | Phase 2 | Pending |
+| ITER-08 | Phase 2 | Pending |
+| ITER-09 | Phase 2 | Pending |
+| DASH-01 | Phase 3 | Pending |
+| DASH-02 | Phase 3 | Pending |
+| DASH-03 | Phase 3 | Pending |
+| DASH-04 | Phase 3 | Pending |
+| DASH-05 | Phase 3 | Pending |
+| DASH-06 | Phase 3 | Pending |
+| DASH-07 | Phase 3 | Pending |
+| DASH-08 | Phase 3 | Pending |
+| AGENT-01 | Phase 4 | Pending |
+| AGENT-02 | Phase 4 | Pending |
+| AGENT-03 | Phase 4 | Pending |
+| AGENT-04 | Phase 4 | Pending |
+| AGENT-05 | Phase 4 | Pending |
+| AGENT-06 | Phase 4 | Pending |
+| AGENT-07 | Phase 4 | Pending |
+| AGENT-08 | Phase 4 | Pending |
+| AGENT-09 | Phase 4 | Pending |
+| AGENT-10 | Phase 4 | Pending |
+| DEFI-01 | Phase 5 | Pending |
+| DEFI-02 | Phase 5 | Pending |
+| DEFI-03 | Phase 5 | Pending |
+| DEFI-04 | Phase 5 | Pending |
+| DEFI-05 | Phase 5 | Pending |
+| DEFI-06 | Phase 5 | Pending |
+| DEFI-07 | Phase 5 | Pending |
 
 **Coverage:**
 - v1 requirements: 60 total
-- Mapped to phases: 0 (pending roadmap)
-- Unmapped: 60 ⚠️ — to be resolved by gsd-roadmapper
+- Mapped to phases: 60/60
+- Unmapped: 0
+
+| Phase | Requirements | Count |
+|-------|-------------|-------|
+| Phase 1: Foundation and Scaffold | FOUND-01–13, CROSS-01–10 | 23 |
+| Phase 2: Research Lab Presence and Iteration Catalog | LAB-01–06, ITER-01–09 | 15 |
+| Phase 3: Data Layer and On-Chain Dashboard | DASH-01–08 | 8 |
+| Phase 4: Agent Surface (MCP) | AGENT-01–10 | 10 |
+| Phase 5: Read-First Wallet and DeFi Surface | DEFI-01–07 | 7 |
 
 ---
 *Requirements defined: 2026-05-11*
-*Last updated: 2026-05-11 after initial definition*
+*Last updated: 2026-05-11 — traceability populated by gsd-roadmapper*
