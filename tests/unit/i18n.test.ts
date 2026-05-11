@@ -1,5 +1,5 @@
 // @vitest-environment node
-import { describe, expect, it, vi, beforeEach } from 'vitest'
+import { beforeEach, describe, expect, it, vi } from 'vitest'
 
 // Mock next-intl/server: make getRequestConfig an identity wrapper
 // so the callback is directly callable in tests (bypasses RSC-only check).
@@ -46,9 +46,9 @@ describe('i18n/request.ts', () => {
     expect(result.locale).toBe('es-CO')
     expect(result.messages).toBeDefined()
     // lab.json nested structure: messages.hero.wordmark
-    const hero = result.messages['hero'] as Record<string, string>
+    const hero = result.messages.hero as Record<string, string>
     expect(hero).toBeDefined()
-    expect(hero['wordmark']).toBe('WVS Finance')
+    expect(hero.wordmark).toBe('WVS Finance')
   })
 
   it('reads NEXT_LOCALE=en cookie and returns en messages', async () => {
@@ -56,9 +56,9 @@ describe('i18n/request.ts', () => {
 
     expect(result.locale).toBe('en')
     expect(result.messages).toBeDefined()
-    const hero = result.messages['hero'] as Record<string, string>
-    expect(hero['wordmark']).toBe('WVS Finance')
-    expect(hero['tagline']).toBe(
+    const hero = result.messages.hero as Record<string, string>
+    expect(hero.wordmark).toBe('WVS Finance')
+    expect(hero.tagline).toBe(
       'Verified convex hedges for wage-earner macro risk in frontier markets.',
     )
   })
@@ -67,8 +67,8 @@ describe('i18n/request.ts', () => {
     const result = await invokeRequestConfig(undefined)
 
     expect(result.locale).toBe('es-CO')
-    const hero = result.messages['hero'] as Record<string, string>
-    expect(hero['tagline']).toBe(
+    const hero = result.messages.hero as Record<string, string>
+    expect(hero.tagline).toBe(
       'Coberturas convexas verificadas para los riesgos macro del trabajador asalariado en mercados de frontera.',
     )
   })
@@ -84,11 +84,11 @@ describe('i18n/request.ts', () => {
     const result = await invokeRequestConfig('es-CO')
 
     // common.json nested structure: messages.language_switcher.label
-    const switcher = result.messages['language_switcher'] as Record<string, string>
+    const switcher = result.messages.language_switcher as Record<string, string>
     expect(switcher).toBeDefined()
-    expect(switcher['label']).toBe('Idioma')
+    expect(switcher.label).toBe('Idioma')
 
-    const nav = result.messages['nav'] as Record<string, string>
-    expect(nav['skip_to_content']).toBe('Saltar al contenido')
+    const nav = result.messages.nav as Record<string, string>
+    expect(nav.skip_to_content).toBe('Saltar al contenido')
   })
 })

@@ -1,4 +1,4 @@
-import { test, expect } from '@playwright/test'
+import { expect, test } from '@playwright/test'
 
 test('language switcher persists locale across reload via cookie', async ({ page, context }) => {
   await page.goto('/')
@@ -11,7 +11,7 @@ test('language switcher persists locale across reload via cookie', async ({ page
 
   // Verify cookie set.
   const cookies = await context.cookies()
-  expect(cookies.find(c => c.name === 'NEXT_LOCALE')?.value).toBe('en')
+  expect(cookies.find((c) => c.name === 'NEXT_LOCALE')?.value).toBe('en')
 
   // Reload — locale persists.
   await page.reload()
