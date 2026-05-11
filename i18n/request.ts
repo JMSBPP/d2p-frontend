@@ -15,16 +15,21 @@ export default getRequestConfig(async () => {
 
   const commonMessages = (await import(`../messages/${locale}/common.json`)).default as Record<
     string,
-    string
+    unknown
   >
   const labMessages = (await import(`../messages/${locale}/lab.json`)).default as Record<
     string,
-    string
+    unknown
+  >
+  const navMessages = (await import(`../messages/${locale}/nav.json`)).default as Record<
+    string,
+    unknown
   >
 
   const messages = {
     ...commonMessages,
     ...labMessages,
+    ...navMessages,
   }
 
   return { locale, messages }
