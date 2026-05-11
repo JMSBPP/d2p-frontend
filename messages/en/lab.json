@@ -1,0 +1,13 @@
+{
+  "hero.wordmark": "WVS Finance",
+  "hero.tagline": "Verified convex hedges for wage-earner macro risk in frontier markets.",
+  "iteration_counts.heading": "Published iterations",
+  "iteration_counts.pass": "Confirmed",
+  "iteration_counts.fail": "Refuted",
+  "iteration_counts.parked": "Parked",
+  "iteration_counts.in_progress": "In progress",
+  "status.pass.label": "PASS",
+  "status.fail.label": "FAIL",
+  "status.parked.label": "PARKED",
+  "status.in_progress.label": "IN PROGRESS"
+}
